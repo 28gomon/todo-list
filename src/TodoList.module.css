@@ -1,0 +1,89 @@
+.taskItemWrapper {
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #eaeaea;
+    transition: box-shadow .25s ease-in-out;
+}
+
+.taskItemWrapper:hover {
+    box-shadow: 0 1px 12px rgba(0,0,0,0.10);
+}
+
+.taskItemTitle {
+    margin-top: 0;
+}
+
+.taskItemInput {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.taskItemInput input {
+    height: 32px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #eaeaea;
+}
+
+.taskItemInput button {
+    height: 32px;
+    border: none;
+    border-radius: 5px;
+    background-color: #33ab84;
+    color: #ffffff;
+    padding: 0 12px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color .25s ease-in;
+}
+
+.taskItemInput button:disabled {
+    background-color: #abb8b6;
+    cursor: default;
+}
+
+.taskItemList {
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.taskItemList li {
+    position: relative;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    height: 25px;
+}
+
+.taskItemList li button {
+    position: absolute;
+    right: 0;
+    outline: none;
+    border: none;
+    background-color: chocolate;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+.taskItemList li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.taskItemButtonGroup {
+    display: flex;
+    justify-content: space-between;
+}
+
+.taskItemButtonGroup button {
+    border: none;
+    padding: 8px 20px;
+    outline: none;
+    cursor: pointer;
+}

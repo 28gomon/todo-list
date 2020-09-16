@@ -91,7 +91,7 @@ export function TodoList(
 
 	return (
 		<div className={classes.taskItemWrapper}>
-			<div>
+			<div className={classes.ButtonDel}>
 				<button onClick={() => removeTodoList(props.id)}>Del</button>
 			</div>
 			<h3 className={classes.taskItemTitle}>{title}</h3>

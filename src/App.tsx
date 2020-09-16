@@ -28,7 +28,7 @@ function App() {
 
 	let [todoLists, setTodoLists] = useState<Array<TodoListType>>([
 		{id: todoListId1, title: "What to learn", filter: "all"},
-		{id: todoListId2, title: "What to buy", filter: "all"},
+		{id: todoListId2, title: "What to buy", filter: "all"}
 	]);
 
 	let [tasks, setTasks] = useState<TasksStateType>({
@@ -44,7 +44,7 @@ function App() {
 			{id: v1(), title: "Learn JS", isDone: true},
 			{id: v1(), title: "Books", isDone: false},
 			{id: v1(), title: "Fish", isDone: true},
-		],
+		]
 	});
 
 	// filter "active" | "completed"
@@ -88,8 +88,12 @@ function App() {
 		setTasks({...tasks});
 	}
 
+	let cls = ['App'];
+
+	if (todoLists.length < 4) cls.push('AppSpace')
+
 	return (
-		<div className="App">
+		<div className={cls.join(' ')}>
 			{
 				todoLists.map(todo => {
 					let tasksForTodoList = tasks[todo.id];
